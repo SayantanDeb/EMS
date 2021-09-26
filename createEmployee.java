@@ -8,35 +8,35 @@ public createEmployee() //defining createEmployee constructor...
   {
     CheckLimit(); //calling CheckLimit method ...
 //-----------------Input Employee Name-----------------
-    System.out.print("Enter Employee Name : "); //Taking input of the Employee details...
-    String EmployeeName =  System.console().readLine();
-    boolean EmployeeNameIsValid = isString(EmployeeName);
+    System.out.print("Enter Employee Name : ");
+    String EmployeeName =  System.console().readLine(); //Taking input of the Employee names...
+    boolean EmployeeNameIsValid = isString(EmployeeName); //(Validation) calling a user defined function to check if the entered value is string or not...
+
     while ( EmployeeNameIsValid == false )
     {
     System.out.println("Employee Name Must Not Contain Any Number or Special Characters");
-    System.out.print("Enter Employee Name Again : ");//Taking input of the Employee details...
-    EmployeeName =  System.console().readLine();
-    EmployeeNameIsValid = isString(EmployeeName);
+    System.out.print("Enter Employee Name Again : ");
+    EmployeeName =  System.console().readLine(); //Taking input of the Employee names...
+    EmployeeNameIsValid = isString(EmployeeName); //(Validation) calling a user defined function to check if the entered value is string or not...
     }
-//-----------------Input Employee City-----------------
+//-----------------Input Employee Location-----------------
     System.out.print("Enter Employee Location : ");
-    String EmployeeLocation =  System.console().readLine();
-    boolean EmployeeLocationIsValid = isString(EmployeeLocation);
+    String EmployeeLocation =  System.console().readLine(); //Taking input of the Employee location...
+    boolean EmployeeLocationIsValid = isString(EmployeeLocation); //(Validation) calling a user defined function to check if the entered value is string or not...
 
     while ( EmployeeLocationIsValid == false )
     {
     System.out.println("Employee Location Must Not Contain Any Number or Special Characters");
     System.out.print("Enter Employee Location Again : ");
-    EmployeeLocation =  System.console().readLine();
-    EmployeeLocationIsValid = isString(EmployeeLocation);
+    EmployeeLocation =  System.console().readLine(); //Taking input of the Employee location...
+    EmployeeLocationIsValid = isString(EmployeeLocation); //(Validation) calling a user defined function to check if the entered value is string or not...
     }
-
+//-----------------Input Employee Mobile Number-----------------
     System.out.print("Enter Employee Mobile Number : ");
     String EmployeeMobileNo =  System.console().readLine();
 
-
+//--------------------------------------------------------------
     createRecord(EmployeeName,EmployeeLocation,EmployeeMobileNo); //Creating the employee record...
-
   }
 
 public void CheckLimit() //defining the employee limit method...
@@ -87,8 +87,8 @@ private void createRecord(String EmployeeName,String EmployeeLocation,String Emp
      }
   }
 //-------------------------------------------------------------
-public static boolean isString(String str)
+public static boolean isString(String str) //Boolean method to check if the value is string or not...
     {
-        return ((str != null) && (!str.equals("")) && (str.matches("^[a-zA-Z]*$")));
+        return ((str != null) && (!str.equals("")) && (str.matches("^[a-zA-Z]*$"))); //conditions for a string to return true...
     }
 }

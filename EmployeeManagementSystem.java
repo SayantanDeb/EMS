@@ -3,7 +3,10 @@ public class EmployeeManagementSystem //Main class to create objects and invokin
   public static void main(String[] args) //main method
 {
 
-  String input = Menu(); //calling the Menu method and storing the returned value in a variable named 'input'
+while (true)//Looping Menu untill Option 3 (Quit) is selected
+{
+ String input = Menu(); //calling the Menu method and storing the returned value in a variable named 'input'
+
  switch(input) //Switch case conditions
  {
   case "1":
@@ -13,13 +16,14 @@ public class EmployeeManagementSystem //Main class to create objects and invokin
   getEmployee empget = new getEmployee(); //Object creation for getEmployee class
     break;
   case "3":
-      System.out.println("Quit"); //Quit from the MENU
       Runtime.getRuntime().exit(0); // Alternative to System.exit()
     break;
   default:
      System.out.println("Please enter a valid option [ 1-3 ]:");
-//     String input = Menu();
   }
+}
+
+
 }
 public static void clearScreen() //User Defined method to clear the Screen...
 {
